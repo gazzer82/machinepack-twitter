@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Get user profile',
+  friendlyName: 'Get search term',
 
 
-  description: 'Get a user\'s Twitter profile information.',
+  description: 'Search for a term on twitter.',
 
 
   extendedDescription: '',
@@ -34,9 +34,9 @@ module.exports = {
       }
     },
 
-    screenName: {
-      example: 'johngalt',
-      description: 'The Twitter screen name (i.e. username) of a Twitter account to look up.',
+    searchTerm: {
+      example: 'badger',
+      description: 'The term you wish to search for.',
       required: true
     },
 
@@ -73,30 +73,114 @@ module.exports = {
     },
 
     success: {
-      description: 'Returns the user\'s profile.',
-      example: {
-        name: 'John Galt',
-        screenName: 'johngalt',
-        profileImageUrl: 'http://pbs.twimg.com/profile_images/3367735923/e3fa48371ed40fb3466fc2cdec18a3aa_normal.jpeg',
-        profileImageUrlHttps: 'https://pbs.twimg.com/profile_images/3367735923/e3fa48371ed40fb3466fc2cdec18a3aa_normal.jpeg',
-        bannerImageUrl: 'https://pbs.twimg.com/profile_banners/54952598/1354583726',
-        location: 'Galt\'s Gulch',
-        description: 'Overall philosophical genius',
-        createdAt: '2009-07-08T16:50:31.000Z',
-        url: 'http://t.co/UDSfsSDFd',
-        followersCount: 5050234234,
-        friendsCount: 23423423423,
-        listedCount: 2342,
-        favoritesCount: 124,
-        statusesCount: 23423,
-        utcOffset: -18000,
-        timezone: 'Eastern Time (US & Canada)',
-        language: 'en',
-        isGeoEnabled: true,
-        isProtected: true,
-        isVerified: true,
-        isSuspended: true
-      }
+      description: 'Returns the posts associate with a twitter search term.',
+      {
+  "statuses":  [
+     {
+      "metadata":  {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "created_at": "Tue Mar 31 22:18:42 +0000 2015",
+      "id": 583030686556299300,
+      "id_str": "583030686556299265",
+      "text": "WHAT IF THE NINTENDO DIRECT SHOWS LOTS OF NEW GAMES THAT I WANT AHHH IM EXCITED",
+      "source": "<a href="http://twitter.com" rel="nofollow">Twitter Web Client</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user":  {
+        "id": 1494206090,
+        "id_str": "1494206090",
+        "name": "Sam",
+        "screen_name": "Minty_Badger",
+        "location": "",
+        "profile_location": null,
+        "description": "becky, she/her, cis, ace",
+        "url": "http://t.co/cnWJ38W9CH",
+        "entities":  {
+          "url":  {
+            "urls":  [
+               {
+                "url": "http://t.co/cnWJ38W9CH",
+                "expanded_url": "http://www.samwise-gardner.tumblr.com",
+                "display_url": "samwise-gardner.tumblr.com",
+                "indices":  [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description":  {
+            "urls":  []
+          }
+        },
+        "protected": false,
+        "followers_count": 185,
+        "friends_count": 130,
+        "listed_count": 3,
+        "created_at": "Sat Jun 08 23:50:51 +0000 2013",
+        "favourites_count": 15388,
+        "utc_offset": 7200,
+        "time_zone": "Amsterdam",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 43955,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/581929357318455298/UVZiKYzq_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/581929357318455298/UVZiKYzq_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1494206090/1427577702",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities":  {
+        "hashtags":  [],
+        "symbols":  [],
+        "user_mentions":  [],
+        "urls":  []
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    }
+  ],
+  "search_metadata":  {
+    "completed_in": 0.01,
+    "max_id": 583030686556299300,
+    "max_id_str": "583030686556299265",
+    "next_results": "?max_id=583030686556299264&q=badger&count=1&include_entities=1",
+    "query": "badger",
+    "refresh_url": "?since_id=583030686556299265&q=badger&include_entities=1",
+    "count": 1,
+    "since_id": 0,
+    "since_id_str": "0"
+  }
+}
     }
 
   },
@@ -107,13 +191,12 @@ module.exports = {
     var request = require('request');
 
     request.get({
-      url: 'https://api.twitter.com/1.1/users/show.json',
+      url: 'https://api.twitter.com/1.1/search/tweets.json',
       qs: (function _determineParams (){
-        // EITHER screen name or user id is required, but NOT BOTH!
-        // (for now we just allow username)
+        // Search term required
         var _params = {};
-        if (inputs.screenName) {
-          _params.screen_name = inputs.screenName;
+        if (inputs.searchTerm) {
+          _params.q = inputs.searchTerm;
         }
         return _params;
       })(),
@@ -133,27 +216,8 @@ module.exports = {
       }
 
       return exits.success({
-        name: body.name,
-        screenName: body.screen_name,
-        profileImageUrl: body.profile_image_url,
-        profileImageUrlHttps: body.profile_image_url_https,
-        bannerImageUrl: body.profile_banner_url,
-        location: body.location,
-        description: body.description,
-        url: body.url,
-        followersCount: body.followers_count,
-        friendsCount: body.friends_count,
-        listedCount: body.listed_count,
-        createdAt: (new Date(body.created_at)).toJSON(),
-        favoritesCount: body.favourites_count,
-        utcOffset: body.utc_offset,
-        timezone: body.time_zone,
-        isVerified: body.verified,
-        language: body.lang,
-        isGeoEnabled: body.geo_enabled,
-        statusesCount: body.statuses_count,
-        isProtected: body.protected,
-        isSuspended: body.suspended
+        statuses: body.statuses,
+        search_metadata: search_metadata
       });
     });
   }
